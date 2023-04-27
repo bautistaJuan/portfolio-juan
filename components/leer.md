@@ -1,0 +1,1 @@
+En esta carpeta se alojan los JS y CSS a reutilizar del HEADER y FOOTER 
