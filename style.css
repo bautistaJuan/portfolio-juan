@@ -74,7 +74,7 @@ body{
     right: 0;
     left: 0;
     height: 500px;
-    background-image: url(./images/fondo-menu.jpg);
+    background-image: url(./images/fondoMenu.jpg);
 }
 @media (min-width:960px){
     .header_window{
