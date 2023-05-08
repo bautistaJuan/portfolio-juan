@@ -5,78 +5,43 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio Profesional - Juan</title>
+  <title>Mi Portafolio - Juan</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="./index.js"></script>
+
+  <link rel="stylesheet" href="./components/componentHeader/header.css" />
+  <script defer src="./components/componentHeader/header.js"></script>
+
+  <link rel="stylesheet" href="./components/componentBienvenida/bienvenida.css" />
+  <script defer src="./components/componentBienvenida/bienvenida.js"></script>
+
+  <link  rel="stylesheet" href="./components/componentPresentation/presentation.css">
+  <script defer src="./components/componentPresentation/presentation.js"></script>
+
+  <!-- <link rel="stylesheet" href="./components/componentCard/card.css" />
+  <script defer src="./components/componentCard/card.js"></script> -->
+  <!-- 
+  <link rel="stylesheet" href="./componenteForm/index.css" />
+  <script defer src="./componenteForm/index.js"></script>
+
+  <link rel="stylesheet" href="./componenteFooter/index.css" />
+  <script defer src="./componenteFooter/index.js"></script> -->
+
+  <script defer src="./pages/index.js"></script>
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body>
 
-  <header class="header_content">
-    <div class="header_logo-container">
-      <a href="./index.html"><img src="images/logo-inicio.png" alt="logo" class="header_logo-img"></a>
-    </div>
+  <header class="header"></header>
 
-    <div class="header_window">
-      <button id="btn-open" class="header_btn-open-window">&#9776;</button>
-      <div class="window-content">
-        <button id="btn-close" class="window-btn-close">X</button>
-        <div class="menu-options">
-          <a class="menu-link" href="./servicios.html">Servicios</a>
-          <a class="menu-link" href="./contacto.html">Contacto</a>
-          <a class="menu-link" href="./portafolio.html">Portafolio</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="header_options">
-      <a href="./portfolio.html" class="option-secelected">Portfolio</a>
-      <a href="./servicios.html" class="option-secelected">Servicios</a>
-      <a href="./contacto.html" class="option-secelected">Contacto</a>
-    </div>
-  </header>
+  <div class="section-1-welcome"></div>
 
 
-
-
-
-
-
-  
-
-    <div class="section-1-welcome">
-      <section class="section-1-welcome_name-img">
-        <h1>
-          Hola
-          <br/>
-          <span style="color: steelblue">Soy Juan</span>
-        </h1>
-        <img src="" alt="soy-juan"/>
-      </section>
-    </div>
-    <div class="section-2-presentation">
-      <section class="section-2-presentation_about-me">
-        <h2 class="soy-juan">Soy Juan</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-          lobortis....
-        </p>
-        <img
-          src=""
-          alt="img-juan"
-          class="container-section-2_presentation-img"
-        />
-      </section>
-    </div>
-    
-   
-    </div>
+  <div class="section-2-presentation"></div>
+  </div>
 </body>
 
 </html>
