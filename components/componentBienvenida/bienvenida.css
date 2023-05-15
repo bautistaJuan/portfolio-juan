@@ -23,16 +23,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    gap: 50px;
+    padding: 30px;
 }
 
 @media (min-width:960px){
     .section-1-welcome_name-img{
-        display: flex;
         flex-direction: row;
-        justify-content: center;
-        gap: 100px;
+        justify-content: space-around;
     }    
 }
 
@@ -40,6 +37,7 @@
     width: 219px;
     height: 211px;
     border-radius: 10px;
+    margin-top: 50px;
 }
 @media (min-width:960px){
     .welcome-img{

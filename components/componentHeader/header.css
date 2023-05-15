@@ -1,4 +1,6 @@
-
+.header_options{
+    display: none;
+}
 .header_content{
     display: flex;
     flex-direction: row;
@@ -28,9 +30,7 @@
         display: none;
     }
 }
-.header_options{
-    display: none;
-}
+
 @media (min-width:960px){
     .header_options{
         font-family: 'Poppins';
