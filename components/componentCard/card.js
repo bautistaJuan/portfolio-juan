@@ -1,3 +1,14 @@
+async function contenfulApi(api) {
+  try {
+    const res = await fetch(api);
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw new Error("Error al obtener los datos de la API de Contentful");
+  }
+}
+
 async function addCards() {
   const cards = await contenfulApi("https://cdn.contentful.com/spaces/dd68k6e6d1nc/environments/master/entries?access_token=CcxcQVXE2pHoueZ7GaLIhx8UERMyLUP2pCWUv_u4lyI&content_type=servicios");
 

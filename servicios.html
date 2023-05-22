@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es-ES">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios</title>
-  <link rel="stylesheet" href="./pages/servicios.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" con#131921e7idth=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <title>Mi Portafolio - Juan</title>
+
+  <link rel="stylesheet" href="./components/componentHeader/header.css" />
+  <script defer src="./components/componentHeader/header.js"></script>
+
+  <link rel="stylesheet" href="./components/componentForm/form.css">
+  <script defer src="./components/componentForm/form.js"></script>
+  <script defer src="./components/componentForm/mail-form.js"></script>
+
+  <link rel="stylesheet" href="./components/componentCard/card.css">
+  <script defer src="./components/componentCard/card.js"></script>
+
+  <link rel="stylesheet" href="./components/componentFooter/footer.css">
+  <script defer src="./components/componentFooter/footer.js"></script>
+
   <script defer src="./pages/servicios.js"></script>
+  <link rel="stylesheet" href="./pages/servicios.css">
 </head>
 
 <body>
-  <div class="section-3-services">
-    <section class="section-3-services_cards">
-      <h2>Mis <span style="color: aqua;">Servicios</span></h2>
-      <div class="mis-servicios">
-        <h3 class="mis-servicios-h2-titulo">Mis Servicios</h3>
-        <div class="desktop">
-          <div class="servicios-desktop">
-            <img src="" alt="desktop">
-            <h3 class="mis-servicios-h3">Hago Cosas 2</h3>
-            <p id="parrafo">Algo interesante sobre mi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              dui
-              quam,
-              sollicitudin at enim id, sodales vehicula velit. Aenean lobortis posuere tristique
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+
+  <header class="header"></header>
+
+  <div class="section-1-welcome-work">
+    <h1 class="h1-my-name"> Mis <br /> <span style="color: #00ADB5">Servicios</span> </h1>
+    <div class="welcome_img-container">
+     <img src="./images/work.png" alt="soy-juan" class="welcome-img"/>
+    </div>
   </div>
+
+  <div class="section-3-services"></div>
+  
+  <div class="footer-container"></div>
 </body>
 
 </html>
