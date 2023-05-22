@@ -20,7 +20,7 @@ function headerComponent(el){
 
     componentEl.innerHTML = ` 
         <div class="header_logo-container">
-         <a href="./index.html"><img src="../images/logo-inicio.png" alt="logo" class="header_logo-img"></a>
+         <a href="./index.html"><img src="./images/logo-inicio.png" alt="logo" class="header_logo-img"></a>
         </div>
 
         <div class="header_window">
