@@ -32,7 +32,7 @@ async function footerComponet(f) {
                 <img src="./images/twitter.png" class="footer-twitter redes" title="Twitter">
             </a>
             </div>
-            <p class="copyright"> ©2023 - <a href="https://apx.school/">apx.school</a></p>
+            <p class="copyright"> ©2023 - <a href="https://apx.school/" class="copyright">apx.school</a></p>
         </footer>
     `
     f.appendChild(footerEl);

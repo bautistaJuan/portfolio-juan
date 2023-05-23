@@ -5,8 +5,6 @@
 .footer{
     display: flex;
     flex-direction: column;
-    font-family: 'Poppins';
-
 }
 .footer-logo{
     width: 150px;
@@ -30,14 +28,14 @@
 }
 .footer-ul > li {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 .footer-ul > li > a {
     text-decoration: none;
     color: #ffff;
     font-size:25px;
     display: flex;
-    align-items: center;
+    align-items:end;
 }
 .footer-ul > li > a > span {
     margin-left: 12px;
@@ -48,12 +46,15 @@
     align-self: center;
 }
 .redes{
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     margin-right: 25px;
-    margin-top: 45px;
 }
-.copyright, a{
+
+/* #linkedin, #github, #twitter{
+} */
+
+.copyright{
     text-decoration: none;
     font-weight: 400;
     line-height: 27px;
@@ -62,4 +63,3 @@
     text-align: center;
     margin-top: 60px;
 }
-
