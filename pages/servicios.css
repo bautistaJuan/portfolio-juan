@@ -6,6 +6,9 @@ body{
     background-color: #13171c;
     font-family: 'Poppins';
 }
+.h1-my-name{
+    color: #ffffff;
+}
 .section-1-welcome-work{
     border-top: solid .1px #131921;
     display: flex;

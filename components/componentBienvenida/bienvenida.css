@@ -5,7 +5,9 @@
     line-height: 75px;
     font-weight: 700;
     text-align: center;
+    color: #ffffff;
 }
+
 @media (min-width:960px){
     .h1-my-name{
         margin: 0;
@@ -38,6 +40,8 @@
     height: 211px;
     border-radius: 10px;
     margin-top: 50px;
+    object-fit: cover;
+    object-position: center;
 }
 @media (min-width:960px){
     .welcome-img{

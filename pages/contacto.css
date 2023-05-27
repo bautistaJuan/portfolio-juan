@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    background-color: #13171C;
+    color: white;
+}
 .section-4-form{
     font-family: 'Poppins';
     background-color: #13171C;

@@ -29,8 +29,7 @@ async function welcomeComponent(el) {
   const data = await contenfulApi("https://cdn.contentful.com/spaces/dd68k6e6d1nc/environments/master/entries?access_token=CcxcQVXE2pHoueZ7GaLIhx8UERMyLUP2pCWUv_u4lyI");
   const asset = data.includes.Asset.find((asset) => {
     const imageTitle ="Una foto de bienvenida";
-    const ok = asset.fields.title.includes(imageTitle);
-    return ok;
+    return asset.fields.title.includes(imageTitle);
   }
   );
   const welcomeImgEl = document.querySelector(".welcome-img");
