@@ -10,9 +10,8 @@ async function contenfulApi(api) {
 }
 
 async function welcomeComponent(el) {
-
   const welcomeEl = document.createElement("section");
-  welcomeEl.className = "section-1-welcome_name-img"
+  welcomeEl.className = "section-1-welcome_name-img";
 
   welcomeEl.innerHTML = `
     <h1 class="h1-my-name">
@@ -23,15 +22,18 @@ async function welcomeComponent(el) {
     <div class="welcome_img-container">
     <img src="" alt="soy-juan" class="welcome-img"/>
     </div>
-    `
+    `;
   el.appendChild(welcomeEl);
 
-  const data = await contenfulApi("https://cdn.contentful.com/spaces/dd68k6e6d1nc/environments/master/entries?access_token=CcxcQVXE2pHoueZ7GaLIhx8UERMyLUP2pCWUv_u4lyI");
-  const asset = data.includes.Asset.find((asset) => {
-    const imageTitle ="Una foto de bienvenida";
-    return asset.fields.title.includes(imageTitle);
-  }
+  const data = await contenfulApi(
+    "https://cdn.contentful.com/spaces/dd68k6e6d1nc/environments/master/entries?access_token=CcxcQVXE2pHoueZ7GaLIhx8UERMyLUP2pCWUv_u4lyI"
   );
+  const asset = data.includes.Asset.find(asset => {
+    const imageTitle = "Una foto de bienvenida";
+    return asset.fields.title.includes(imageTitle);
+  });
   const welcomeImgEl = document.querySelector(".welcome-img");
   welcomeImgEl.src = asset.fields.file.url;
 }
+
+export { welcomeComponent };

@@ -1,0 +1,11 @@
+{
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "Mi portfolio para trabajos",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.2"
+  }
+}
