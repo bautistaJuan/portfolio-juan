@@ -1,6 +1,6 @@
 import { stylesForHeader } from "./header-styles";
-customElements.define(
-  "header-nav",
+function headerComp(goTo) {
+  console.log(goTo);
   class Header extends HTMLElement {
     shadow = ShadowRoot;
     name = String;
@@ -10,6 +10,7 @@ customElements.define(
     }
     connectedCallback() {
       stylesForHeader(this.shadow);
+
       //   Validar que name obtenga el nombre
       this.name = this.getAttribute("name");
       const validName = this.name != null && this.name !== "";
@@ -24,34 +25,42 @@ customElements.define(
       divContainer.classList.add("header-nav-container");
       divContainer.innerHTML = `
         <div class="header-name-button">
-          <h1 class="name-h1">${this.name}</h1>
-          <button class="header_open-options">
+          <h1 class="name-h1" value="/home" >${this.name}</h1>
+          <button class="button-menu">
             <div></div>
             <div></div>
             <div></div>
           </button>
-        </div>
-        <nav class="header-nav">
-         <ul class="header_nav-ul">
-            <li class="header_nav-ul_li" value="/servicios"><span>Works</span></li>
-            <li class="header_nav-ul_li" value="/contacto"><span>Contact</span></li>
+          <ul class="header-ul">
+            <li class="header-ul-li li-header" value="/servicios"><span>Works</span></li>
+            <li class="header-ul-li li-header" value="/contacto"><span>Contact</span></li>
           </ul>
-        </nav>
-
+        </div>
+        <div class="container-nav">
+         <nav class="nav">
+           <ul class="nav-ul">
+             <li class="nav-ul_li" value="/servicios"><span>Works</span></li>
+             <li class="nav-ul_li" value="/contacto"><span>Contact</span></li>
+           </ul>
+         </nav>          
+       </div>      
       `;
 
-      const btn = divContainer.querySelector(".header_open-options");
-      const navMenu = divContainer.querySelector(".header-nav");
-      const navMenuLi = navMenu.querySelectorAll("li");
+      const btn = divContainer.querySelector(".button-menu");
+      const h1Name = divContainer.querySelector(".name-h1");
+      const navMenu = divContainer.querySelector(".nav");
+      const navMenuLi = divContainer.querySelectorAll("li");
+
+      h1Name.addEventListener("click", () => {
+        goTo.goTo(h1Name.getAttribute("value"));
+      });
+
       navMenuLi.forEach(list => {
         list.addEventListener("click", () => {
           const route = list.getAttribute("value");
-          const eventLi = new CustomEvent("liRoute", {
-            detail: {
-              route: route,
-            },
-          });
-          this.dispatchEvent(eventLi);
+          btn.classList.remove("button-menu-active");
+          navMenu.style.display = "none";
+          goTo.goTo(route);
         });
       });
       function btnShowOptionsMenu() {
@@ -59,17 +68,25 @@ customElements.define(
         btn.addEventListener("click", e => {
           isActive = !isActive;
           if (isActive) {
-            btn.classList.add("header_open-options-active");
+            btn.classList.add("button-menu-active");
             navMenu.style.display = "flex";
           } else {
-            btn.classList.remove("header_open-options-active");
+            btn.classList.remove("button-menu-active");
             navMenu.style.display = "none";
           }
         });
       }
       btnShowOptionsMenu();
+      window.addEventListener("popstate", () => {
+        btn.classList.remove("button-menu-active");
+        navMenu.style.display = "none";
+      });
 
       this.shadow.appendChild(divContainer);
     }
   }
-);
+
+  customElements.define("header-nav", Header);
+}
+
+export { headerComp };

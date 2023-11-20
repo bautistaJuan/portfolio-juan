@@ -1,7 +1,7 @@
 import { homePage } from "./pages/home/home";
 import { contactPage } from "./pages/contact/contacto";
 import { servicesPage } from "./pages/servicios/servicios";
-
+import { headerComp } from "./components/componentHeader/header";
 const routes = [
   {
     path: /\/home/,
@@ -16,12 +16,14 @@ const routes = [
     handle: servicesPage,
   },
 ];
-function initRouter(container) {
+function headerInit(headerFuntion, params) {
+  return headerFuntion(params);
+}
+function initRouter(container, header) {
   function goTo(route) {
     history.pushState({}, "", route);
     handleRoute(route);
   }
-
   function handleRoute(route) {
     console.log(`new route is: ${route}`);
 
@@ -42,6 +44,9 @@ function initRouter(container) {
   window.onpopstate = () => {
     handleRoute(location.pathname);
   };
+
+  // para que los botones del header puedan cambiar la pagina
+  headerInit(header, { goTo: goTo });
 }
 
 export { initRouter };
