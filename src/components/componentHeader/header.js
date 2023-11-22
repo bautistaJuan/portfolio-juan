@@ -1,6 +1,5 @@
 import { stylesForHeader } from "./header-styles";
 function headerComp(goTo) {
-  console.log(goTo);
   class Header extends HTMLElement {
     shadow = ShadowRoot;
     name = String;
