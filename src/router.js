@@ -1,6 +1,13 @@
 import { homePage } from "./pages/home/home";
 import { contactPage } from "./pages/contact/contacto";
 import { servicesPage } from "./pages/servicios/servicios";
+
+const BASE_PATH = "/dwf-m5-desafio-final";
+
+function isGithubPages() {
+  return location.host.includes("bautistajuan.github.io");
+}
+
 const routes = [
   {
     path: /\/home/,
@@ -15,9 +22,11 @@ const routes = [
     handle: servicesPage,
   },
 ];
+
 function headerInit(headerFuntion, params) {
   return headerFuntion(params);
 }
+
 function initRouter(container, header) {
   function goTo(route) {
     history.pushState({}, "", route);
@@ -35,11 +44,12 @@ function initRouter(container, header) {
     }
   }
 
-  if (location.pathname == "/") {
+  if (location.pathname == "/" || location.pathname == "/Portfolio-de-Juan/") {
     goTo("/home");
   } else {
     handleRoute(location.pathname);
   }
+
   window.onpopstate = () => {
     handleRoute(location.pathname);
   };
