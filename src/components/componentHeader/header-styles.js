@@ -2,7 +2,7 @@ function stylesForHeader(shadow) {
   const styles = document.createElement("style");
   styles.innerHTML = `
         .header-nav-container {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Roboto';
             display: flex;
             flex-direction: column;
             text-align:center;
@@ -11,7 +11,8 @@ function stylesForHeader(shadow) {
         .name-h1 {
             margin: 0;
             padding: 0px;
-            font-size: 30px;
+            cursor: pointer;
+            width: 120px; 
         }
 
         .header-name-button{
@@ -28,7 +29,7 @@ function stylesForHeader(shadow) {
             justify-content: end;
             width: 100%;
         }
-        @media (min-width:500px){
+        @media (min-width:700px){
             .header-ul{
                 display:flex;
             }
@@ -40,6 +41,10 @@ function stylesForHeader(shadow) {
             margin-right: 32px;
             cursor: pointer;
         }
+        .container-nav{
+            z-index: 1;
+        }
+
         .nav{
             display:none;
             position: absolute;
@@ -51,6 +56,9 @@ function stylesForHeader(shadow) {
         .nav-ul_li, .nav-ul {
             padding:0;
             margin:0;
+        }
+        .nav-ul_li{
+           cursor: pointer; 
         }
         .nav-ul{
             background-color:#ffffff;
@@ -78,13 +86,14 @@ function stylesForHeader(shadow) {
             background: transparent;
             gap: .65rem;
             margin-top: auto;  
+            cursor: pointer;
         }
-        @media (min-width:500px){
+        @media (min-width:700px){
             .button-menu{
                 display:none;
             }
         }
-        @media (min-width:500px){
+        @media (min-width:700px){
             .button-menu-active{
                 display:none;
             }

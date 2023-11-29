@@ -1,13 +1,7 @@
 .home-page_container {
     margin: 0;
-    padding: 20px;
-    height: 100vh;
 }
 
 .img {
-    width: 200px;
-}
-
-.arrow {
     width: 200px;
 }

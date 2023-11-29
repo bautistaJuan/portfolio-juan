@@ -1,167 +1,74 @@
-* {
-    box-sizing: border-box;
+.form {
+    width: 100%;
+    height: 660px;
+    color: #141414;
+    padding: 40px 20px;
 }
 
-body {
-    margin: 0;
-    font-family: 'Poppins';
-    background-color: #13171C;
-    color: white;
-}
-.section-4-form{
-    font-family: 'Poppins';
-    background-color: #13171C;
-    height: 1000px;
-    min-width: 375px;
-}
-@media (min-width:960px){
-    .section-4-form{
-        display: flex;
-        height: 900px;
+@media (min-width:768px) {
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
     }
+
 }
 
-
-.section-4-form_title{
-    font-size: 42px;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    padding-top: 30px;
-    
-}
-@media (min-width:960px){
-    .section-4-form_title{
-        font-size: 64px;
-        margin-top: 140px;
-        margin-left: 70px
-    }
+.label {
+    font-family: 'Roboto';
 }
 
-.section-4-form_content{
-    width: 313px;
-    height: 649px;
+.filedset {
     display: flex;
     flex-direction: column;
+
+}
+
+.section {
+    width: 100%;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap:25px;
-    margin:0 auto
+    flex-direction: column;
 }
-@media (min-width:960px){
-    .section-4-form_content{
-        width: 600px;
-        align-items:flex-start;
-        margin-top: 70px;
-        
-    }
-}
-@media (min-width:960px){
 
-    .section-4-form_name-email{
-        display: flex;
-        align-items: baseline;
-        gap: 20px;
+@media (min-width:768px) {
+    .section {
+        align-items: start;
+        padding: 40px 70px;
     }
 }
 
-
-.section-4-form_name{
-    font-size: 18px;
-    font-weight: 700;
-    color: #eeeeee;
-    margin-bottom: 10px;
-    margin-top: 100px;
+.input-text {
+    width: 335px;
+    height: 45px;
+    margin-bottom: 50px;
 }
 
-.section-4-form_input-name{
-    width: 313px;
-    height: 59px;
-    background-color: #393E4680;
-    border:none;
-    border-radius: 10px;
-    color: #eeeeee;
-    font-size: 15px;
-    padding-left: 15px;
-    font-weight: 500;
-    
-}
-@media (min-width:960px){
-    .section-4-form_input-name{
-        width: 288px;
-        height: 59px;
-    }
-}
-.section-4_form-email{
-    font-size: 18px;
-    font-weight: 700;
-    color: #eeeeee; 
-    margin-bottom: 10px;
-}
-.section-4_input-mail{
-    width: 313px;
-    height: 59px; 
-    background-color: #393E4680; 
-    border:none;
-    border-radius: 10px;
-    color: #eeeeee;
-    font-size: 15px;
-    padding-left: 15px;
-    font-weight:500;
-}
-@media (min-width:960px){
-    .section-4_input-mail{
-        width: 288px;
-        height: 59px;
-    }
-}
-
-.section-4_form-mensaje{
-    font-size: 18px;
-    font-weight: 700;
-    color: #eeeeee; 
-    margin-bottom: 10px;
-}
-
-.section-4_form-textarea{
-    width: 313px;
-    height: 280px;
-    background-color: #393E4680;
-    border:none;
-    border-radius: 8px;
-    font-size: 15px;
-    padding-left: 15px;
-    font-weight: 500;
-    padding-top: 15px;
-    color: #eeeeee;
+.textarea {
+    width: 335px;
+    height: 113px;
     resize: none;
-    
-}
-@media (min-width:960px){
-    .section-4_form-textarea{
-        width: 600px;
-        height: 280px;
-    }
 }
 
-.section-4_form-button{
-    width: 313px;
-    height: 55px;
-}
-@media (min-width:960px){
-    .section-4_form-button{
-        justify-content: left;
-    }
+.btn {
+    width: 335px;
+    height: 45px;
+    background-color: #FFD953;
+    margin-top: 60px;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 700;
 }
 
-.button{
-    font-family: 'Poppins';
-    background-color: #00ADB5;
-    border:none;
-    border-radius: 15px;
-    width: 313px;
-    height: 55px;
-   font-size: 18px;
-   font-weight: 700;
-   line-height: 27px;
+.titulo-h3 {
+    font-family: 'Open Sans';
+    font-size: 32px;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .titulo-h3 {
+        text-align: end;
+        font-size: 48px;
+    }
 }

@@ -19,15 +19,16 @@ function homePage(params) {
         <p>
          Argentina, Buenos Aires. 
         </p>
-        
         <h3>Conocimientos</h3>
         <span id="cargue">Frontend developer</span> | <span id="html">HTML5</span> | <span id="css">CSS</span> | <span id="tailwind">Tailwind CSS</span> | <span id="javascript">JavaScript</span> | <span id="typescrip">TypeScript</span> | <span id="react">React</span> | <span id="firestore">Firestore / Firebase</span> | <span id="git">Git</span> | <span id="poo">POO</span> | <span id="npm">npm</span> | <span id="nodejs">Node.js</span>  | <span id="spa">SPA</span>  | <span id="api">REST API</span> 
         <br>
         <br>
       </div>
       </div>
+      <custom-projects ></custom-projects>
+      <custom-footer></custom-footer>
+
       `;
-  // <img src=${images.icon} class="arrow">
   return div;
 }
 

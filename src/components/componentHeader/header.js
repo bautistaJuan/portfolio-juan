@@ -31,13 +31,15 @@ function headerComp(goTo) {
             <div></div>
           </button>
           <ul class="header-ul">
+            <li class="header-ul-li li-header" value="/home"><span>Home</span></li>
             <li class="header-ul-li li-header" value="/servicios"><span>Works</span></li>
             <li class="header-ul-li li-header" value="/contacto"><span>Contact</span></li>
           </ul>
         </div>
         <div class="container-nav">
-         <nav class="nav">
-           <ul class="nav-ul">
+          <nav class="nav">
+            <ul class="nav-ul">
+             <li class="nav-ul_li" value="/home"><span>Home</span></li>
              <li class="nav-ul_li" value="/servicios"><span>Works</span></li>
              <li class="nav-ul_li" value="/contacto"><span>Contact</span></li>
            </ul>

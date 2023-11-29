@@ -1,7 +1,6 @@
 import { homePage } from "./pages/home/home";
 import { contactPage } from "./pages/contact/contacto";
 import { servicesPage } from "./pages/servicios/servicios";
-import { headerComp } from "./components/componentHeader/header";
 const routes = [
   {
     path: /\/home/,
