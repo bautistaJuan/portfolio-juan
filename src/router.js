@@ -2,7 +2,7 @@ import { homePage } from "./pages/home/home";
 import { contactPage } from "./pages/contact/contacto";
 import { servicesPage } from "./pages/servicios/servicios";
 
-const BASE_PATH = "/dwf-m5-desafio-final";
+const BASE_PATH = "/Portfolio-de-Juan";
 
 function isGithubPages() {
   return location.host.includes("bautistajuan.github.io");
@@ -29,14 +29,16 @@ function headerInit(headerFuntion, params) {
 
 function initRouter(container, header) {
   function goTo(route) {
-    history.pushState({}, "", route);
+    const completePath = isGithubPages() ? BASE_PATH + route : route;
+    history.pushState({}, "", completePath);
     handleRoute(route);
   }
   function handleRoute(route) {
     console.log(`new route is: ${route}`);
 
+    const newRoute = isGithubPages() ? route.replace(BASE_PATH, "") : route;
     for (const r of routes) {
-      if (r.path.test(route)) {
+      if (r.path.test(newRoute)) {
         const changePage = r.handle({ goTo: goTo });
         container.firstChild?.remove();
         container.appendChild(changePage);
