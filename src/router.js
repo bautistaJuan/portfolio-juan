@@ -2,7 +2,7 @@ import { homePage } from "./pages/home/home";
 import { contactPage } from "./pages/contact/contacto";
 import { servicesPage } from "./pages/servicios/servicios";
 
-const BASE_PATH = "/Portfolio-de-Juan";
+const BASE_PATH = "/portfolio-juan";
 
 function isGithubPages() {
   return location.host.includes("bautistajuan.github.io");
@@ -31,7 +31,7 @@ function initRouter(container, header) {
   function goTo(route) {
     const completePath = isGithubPages() ? BASE_PATH + route : route;
     history.pushState({}, "", completePath);
-    handleRoute(route);
+    handleRoute(completePath);
   }
   function handleRoute(route) {
     console.log(`new route is: ${route}`);
@@ -46,7 +46,7 @@ function initRouter(container, header) {
     }
   }
 
-  if (location.pathname == "/" || location.pathname == "/Portfolio-de-Juan/") {
+  if (location.pathname == "/" || location.pathname == "/portfolio-juan/") {
     goTo("/home");
   } else {
     handleRoute(location.pathname);
